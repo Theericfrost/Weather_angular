@@ -1,0 +1,26 @@
+$blue: rgb(111, 155, 180);
+
+.container {
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+form {
+  text-align: center;
+}
+
+button {
+  background: darken($blue, 33);
+  border: none;
+  color: white;
+  padding: 10px;
+}
+
+input {
+  height: 33px;
+  border: 0.5px solid darken($blue, 33);
+}

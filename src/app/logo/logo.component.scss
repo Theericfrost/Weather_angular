@@ -1,0 +1,16 @@
+$blue : rgb(111, 155, 180);
+.container {
+  background: darken($blue, 33);
+  height: 50px;
+  padding-top: 30px;
+  a {
+    margin-left:  40px;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+  }
+  a:hover {
+    border-bottom: 2px solid rgb(92, 44, 44);
+
+  }
+}

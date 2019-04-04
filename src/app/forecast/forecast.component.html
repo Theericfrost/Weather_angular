@@ -1,0 +1,21 @@
+<form  [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="forecastCity" placeholder="cityName">
+  <button type="button" (click)="onSubmit()" >Submit</button>
+  <button type="button" (click)="sortData()">Сортировка по Дате в обратную сторону</button>
+  <button type="button" (click)="sortTemp()">Сортировка по Температуре</button>
+  <button type="button" (click)="sortTempReverse()">Сортировка по Температуре в обратную сторону</button>
+</form>
+<div class="container">
+  <div *ngFor="let day of cityForecast">
+    <div class="day">
+      <h2>{{day.date | date: 'MMMMd'}}</h2>
+    </div>
+    <div class="icon">
+      <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="">
+    </div>
+    <div class="temp">
+      <h3>Max: {{day.tempMax}}&deg;C</h3>
+      <h3>Min: {{day.tempMin}}&deg;C</h3>
+    </div>
+  </div>
+</div>
